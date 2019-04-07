@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package grpc.commons.v1;
+
+message Debug {
+    string debugId = 1;
+}
+
+message Authorization {
+    string ip = 1;
+    string userAgent = 2;
+}

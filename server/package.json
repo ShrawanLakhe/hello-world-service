@@ -1,0 +1,35 @@
+{
+  "name": "hello-world-service",
+  "version": "1.0.0",
+  "description": "Microservices - Hello World Service",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha tests/index.spec.js",
+    "coverage": "nyc --reporter=html npm test",
+    "start": "node server.js",
+    "run": "nodemon server.js"
+  },
+  "keywords": [
+    "microservice",
+    "hello-world-service"
+  ],
+  "author": "shrawan lakhe",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.4.0",
+    "bluebird": "^3.5.3",
+    "dotenv": "^6.2.0",
+    "events": "^3.0.0",
+    "google-protobuf": "^3.6.1",
+    "grpc": "^1.18.0",
+    "uuid": "^3.3.2",
+    "validator": "^10.9.0",
+    "winston": "^3.1.0",
+    "winston-daily-rotate-file": "^3.5.1",
+    "winston-elasticsearch": "^0.7.7"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "nyc": "^13.2.0",
+    "sinon": "^7.2.3"
+  }
+}

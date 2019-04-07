@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package grpc.hello.v1;
+
+import "commons.proto";
+
+message HelloWorldRequest {
+    string stringValue = 1;
+}
+
+message HelloWorldResponse {
+    string stringValue = 1;
+    bool success = 2;
+    bool error = 3;
+    string msg = 4;
+    grpc.commons.v1.Debug debug = 5;
+    grpc.commons.v1.Authorization authorization = 6;
+}
+
+message Empty {}
+
+service HelloWorldRpc {
+    rpc printHelloWorld(Empty) returns (HelloWorldResponse);
+}
